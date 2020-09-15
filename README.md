@@ -2,7 +2,7 @@
 
 Fast Fourier Transform in Golang.
 
-高速フーリエ変換/逆変換のライブラリです。
+A library of fast Fourier transforms / inverse transforms.
 
 ## Install
 
@@ -10,15 +10,15 @@ Fast Fourier Transform in Golang.
 
 ## Usage
 
-フーリエ変換には `fft.FFT` 関数を使います。
+Use the `fft.FFT` function for the Fourier transform.
 
 ```go
 y := fft.FFT(x, n)
 ```
 
-`x` がデータ（複素数）、`n` がデータ数。`n` は 2 のべき乗である必要があります。
+`x` is the number of data (complex number) and` n` is the number of data. `n` must be a power of 2.
 
-逆変換には `fft.IFFT` 関数を使います。
+Use the `fft.IFFT` function for the inverse transform.
 
 ```go
 z := fft.IFFT(y, n)

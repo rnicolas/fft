@@ -29,8 +29,8 @@ func IFFT(x []complex128, n int) []complex128 {
 
 //GetMagnitude alculates frequencies amplitude given a FFT m
 func GetMagnitude(m []complex128) []float64 {
-	a := make([]float64, len(m))
-	for index := 0; index < len(m); index++ {
+	a := make([]float64, len(m)/4)
+	for index := 0; index < len(a); index++ {
 		a[index] = math.Sqrt(math.Pow(real(m[index]), 2) + math.Pow(imag(m[index]), 2))
 	}
 	return a
